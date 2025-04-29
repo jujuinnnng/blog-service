@@ -33,9 +33,10 @@ public class User implements UserDetails { //UserDetails를 상속받아 인증 
     private String nickname;
 
     @Builder
-    public User(String email, String password) {
+    public User(String email, String password, String nickname) {
         this.email = email;
         this.password = password;
+        this.nickname = nickname;
     }
 
     @Override //권한 반환
@@ -80,5 +81,11 @@ public class User implements UserDetails { //UserDetails를 상속받아 인증 
         return true;
     }
 
+    //사용자 이름 변경
+    public  User update(String nickname){
+        this.nickname = nickname;
+
+        return this;
+    }
 
 }
