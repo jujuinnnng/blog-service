@@ -36,6 +36,7 @@ public class OAuth2UserCustomService extends DefaultOAuth2UserService {
                 .orElse(User.builder()
                         .email(email)
                         .nickname(name)
+                        .password("oauth-user") //  임시 패스워드 추가!(password: nullable = false)
                         .build());
 
         return userRepository.save(user);

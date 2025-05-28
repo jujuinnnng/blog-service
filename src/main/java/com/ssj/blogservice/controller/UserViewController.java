@@ -9,7 +9,7 @@ public class UserViewController {
     // 로그인 화면
     @GetMapping("/login")
     public String login() {
-        return "login";
+        return "oauthLogin";
     }
 
     // 회원가입 화면
