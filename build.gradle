@@ -40,3 +40,7 @@ test {
     useJUnitPlatform()
     systemProperty "spring.profiles.active", "test" //테스트분리
 }
+
+jar {
+    enabled = false
+}
